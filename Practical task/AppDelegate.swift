@@ -7,14 +7,24 @@
 //
 
 import UIKit
-
+import Network
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    let monitor = NWPathMonitor()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let queue = DispatchQueue.global(qos: .background)
+        monitor.start(queue: queue)
+        monitor.pathUpdateHandler = { path in
+            print("the paths",path)
+            if path.status == .satisfied {
+                print("We're connected!")
+            } else {
+               print("No connection.")
+            }
+            print(path.isExpensive)
+        }
         return true
     }
 
