@@ -2,7 +2,7 @@
 
 App for the task with metaWheatherApi.
 
-#requirements.
+# requirements.
 
 Create a native iOS application written in Swift and/or Objective-C.
 Application should give you information about the weather forecast for three big cities (New York, Tokyo
