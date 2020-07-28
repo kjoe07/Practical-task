@@ -21,8 +21,8 @@ class LocationWheatherViewController: UIViewController,UITableViewDataSource,UIT
         service = WheatherService(loader: loader)
         vm = LocationWheatherDayDataViewModel(service: service)
         self.showActivityIndicator(color: .blue)
-        vm.loadData(woeid: location?.WOEID ?? 0)
-        self.title = location?.name
+        vm.loadData(woeid: location?.woeid ?? 0)
+        self.title = location?.title
         tableView.tableFooterView = UIView()
         vm.completion = {[weak self] e in
             DispatchQueue.main.async {
@@ -60,7 +60,7 @@ class LocationWheatherViewController: UIViewController,UITableViewDataSource,UIT
         let alert = UIAlertController(title: "Ups!", message: e.localizedDescription, preferredStyle: .alert)
         let action1 = UIAlertAction(title: "Ok", style: .default, handler: nil)
         let action2 = UIAlertAction(title: "Retry", style: .default, handler: {_ in
-            self.vm.loadData(woeid: self.location?.WOEID ?? 0)
+            self.vm.loadData(woeid: self.location?.woeid ?? 0)
         })
         alert.addAction(action1)
         alert.addAction(action2)
@@ -71,7 +71,7 @@ class LocationWheatherViewController: UIViewController,UITableViewDataSource,UIT
             let vc = segue.destination as! HoursWheatherViewController
             vc.vm = DayFactory().setupVM()
             vc.date = vm.data?.consolidatedWeather?[sender as! Int].applicable_date
-            vc.woeid = self.location?.WOEID
+            vc.woeid = self.location?.woeid
         }
     }
 }

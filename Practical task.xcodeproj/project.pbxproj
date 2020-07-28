@@ -34,6 +34,10 @@
 		11A3AA5A24CA3FC500C82C51 /* HoursWheatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A3AA4524CA3FC500C82C51 /* HoursWheatherViewModel.swift */; };
 		11A3AA5D24CA3FE400C82C51 /* ActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 11A3AA5C24CA3FE400C82C51 /* ActivityIndicator */; };
 		11A3AA6024CA41EF00C82C51 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 11A3AA5F24CA41EF00C82C51 /* Kingfisher */; };
+		11A3AA6224CB355A00C82C51 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A3AA6124CB355A00C82C51 /* Storyboard.storyboard */; };
+		11A3AA6424CB735E00C82C51 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A3AA6324CB735E00C82C51 /* AddLocationViewController.swift */; };
+		11A3AA6624CB75C200C82C51 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A3AA6524CB75C200C82C51 /* SearchService.swift */; };
+		11A3AA6824CB765300C82C51 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A3AA6724CB765300C82C51 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +68,10 @@
 		11A3AA4324CA3FC500C82C51 /* WheatherDateViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheatherDateViewModel.swift; sourceTree = "<group>"; };
 		11A3AA4424CA3FC500C82C51 /* LocationsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		11A3AA4524CA3FC500C82C51 /* HoursWheatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursWheatherViewModel.swift; sourceTree = "<group>"; };
+		11A3AA6124CB355A00C82C51 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		11A3AA6324CB735E00C82C51 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		11A3AA6524CB75C200C82C51 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		11A3AA6724CB765300C82C51 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 				11A3AA3224CA3FC400C82C51 /* WheatherService.swift */,
 				11A3AA3324CA3FC400C82C51 /* MyErrors.swift */,
 				11A3AA3424CA3FC400C82C51 /* NetworkLoader.swift */,
+				11A3AA6524CB75C200C82C51 /* SearchService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -136,6 +145,8 @@
 				11A3AA3B24CA3FC400C82C51 /* LocationWheatherViewController.swift */,
 				11A3AA3C24CA3FC400C82C51 /* HoursWheatherViewController.swift */,
 				11A3AA3D24CA3FC400C82C51 /* DayWheatherTableViewCell.swift */,
+				11A3AA6124CB355A00C82C51 /* Storyboard.storyboard */,
+				11A3AA6324CB735E00C82C51 /* AddLocationViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +167,7 @@
 				11A3AA4324CA3FC500C82C51 /* WheatherDateViewModel.swift */,
 				11A3AA4424CA3FC500C82C51 /* LocationsViewModel.swift */,
 				11A3AA4524CA3FC500C82C51 /* HoursWheatherViewModel.swift */,
+				11A3AA6724CB765300C82C51 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -227,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11A3AA5124CA3FC500C82C51 /* Main.storyboard in Resources */,
+				11A3AA6224CB355A00C82C51 /* Storyboard.storyboard in Resources */,
 				11A3AA2524CA3F7500C82C51 /* LaunchScreen.storyboard in Resources */,
 				11A3AA2224CA3F7500C82C51 /* Assets.xcassets in Resources */,
 			);
@@ -252,6 +265,7 @@
 				11A3AA5024CA3FC500C82C51 /* HourrWheatherTableViewCell.swift in Sources */,
 				11A3AA5924CA3FC500C82C51 /* LocationsViewModel.swift in Sources */,
 				11A3AA4F24CA3FC500C82C51 /* LocationTableViewCell.swift in Sources */,
+				11A3AA6424CB735E00C82C51 /* AddLocationViewController.swift in Sources */,
 				11A3AA5724CA3FC500C82C51 /* LocationWheatherDayDataViewModel.swift in Sources */,
 				11A3AA5824CA3FC500C82C51 /* WheatherDateViewModel.swift in Sources */,
 				11A3AA5324CA3FC500C82C51 /* HoursWheatherViewController.swift in Sources */,
@@ -259,6 +273,8 @@
 				11A3AA4924CA3FC500C82C51 /* HoursWheatherService.swift in Sources */,
 				11A3AA4624CA3FC500C82C51 /* Resusable.swift in Sources */,
 				11A3AA5224CA3FC500C82C51 /* LocationWheatherViewController.swift in Sources */,
+				11A3AA6824CB765300C82C51 /* SearchViewModel.swift in Sources */,
+				11A3AA6624CB75C200C82C51 /* SearchService.swift in Sources */,
 				11A3AA4A24CA3FC500C82C51 /* Api.swift in Sources */,
 				11A3AA4724CA3FC500C82C51 /* UItableViewExtension.swift in Sources */,
 			);

@@ -29,7 +29,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LocationTableViewCell.reuseIdentifier) as? LocationTableViewCell
-        cell?.name.text = location.location?[indexPath.row].name ?? ""
+        cell?.name.text = location.location?[indexPath.row].title ?? ""
         return cell ?? LocationTableViewCell()
     }
     

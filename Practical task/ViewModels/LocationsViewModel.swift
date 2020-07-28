@@ -14,7 +14,7 @@ class LocationsViewModel{
         if let data = UserDefaults.standard.value(forKey: "locations") as? Data{
             location = try? JSONDecoder().decode([Locations].self, from: data)
         }else{
-            location = [Locations(name: "Sofia", WOEID: 839722),Locations(name: "NY", WOEID: 2459115),Locations(name: "Tokyo", WOEID: 1118370)]
+            location = [Locations(woeid: 839722, title: "Sofia"),Locations(woeid: 2459115,title: "NY" ),Locations(woeid: 1118370,title:"Tokyo")]
         }
     }    
 }
