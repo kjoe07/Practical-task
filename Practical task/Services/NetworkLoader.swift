@@ -17,7 +17,7 @@ class NetworkLoader: DataLoader{
     func loadData(url: String, params: [String : Any], method: MethodType,completion: @escaping (Result<Data, Error>) -> Void) {
         var request = URLRequest(url: URL(string: url)!)
         print("the url is \(String(describing: request.url?.absoluteURL))")
-        request.httpMethod = method.method
+        request.httpMethod = method.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -75,15 +75,7 @@ class RemoteWithLocalFallBackLoader: DataLoader{
     
     
 }
-enum MethodType {
+enum MethodType: String {
     case post
     case get
-    var method: String{
-        switch self {
-        case .get:
-            return "GET"
-        case .post:
-            return "POST"
-        }
-    }
 }
