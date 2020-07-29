@@ -72,8 +72,6 @@ class RemoteWithLocalFallBackLoader: DataLoader{
             remote.cancel()
         }
     }
-    
-    
 }
 enum MethodType: String {
     case post
